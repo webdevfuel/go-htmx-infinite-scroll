@@ -1,0 +1,49 @@
+
+package template
+
+import (
+	"fmt"
+	"github.com/webdevfuel/go-htmx-infinite-scroll/post"
+	"github.com/webdevfuel/go-htmx-infinite-scroll/template/layout"
+)
+
+templ InfiniteScroll(posts post.Posts) {
+	@layout.Base() {
+		<div class="grid grid-cols-2 gap-2.5" id="posts">
+			@Posts(posts)
+		</div>
+		@LoadMoreButton(0)
+	}
+}
+
+templ PostsAndButton(posts post.Posts, lastCursor int) {
+	@Posts(posts)
+	@LoadMoreButton(lastCursor)
+}
+
+templ LoadMoreButton(cursor int) {
+	<div
+		id="load-more"
+		hx-swap-oob="true"
+		class="group"
+	>
+		<button
+			hx-get={ loadMorePathAndQuery(cursor) }
+			hx-target="#posts"
+			hx-swap="beforeend"
+			hx-indicator="#load-more"
+			class="flex items-center text-sm font-bold bg-blue-700 hover:opacity-80 text-white rounded-lg py-1.5 px-2.5 mt-5 group-[.htmx-request]:opacity-50"
+		>
+			Load more
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle animate-spin ml-1 group-[.htmx-request]:block hidden"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path></svg>
+		</button>
+	</div>
+}
+
+func loadMorePathAndQuery(cursor int) string {
+	if cursor == 0 {
+		return "/infinite-scroll"
+	} else {
+		return fmt.Sprintf("/infinite-scroll?cursor=%d", cursor)
+	}
+}
