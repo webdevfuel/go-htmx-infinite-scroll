@@ -1,0 +1,127 @@
+[
+  {
+    "id": 1,
+    "title": "Morning Bliss",
+    "description": "Start your day with a peaceful morning routine."
+  },
+  {
+    "id": 2,
+    "title": "Tech Trends",
+    "description": "Latest updates in the tech industry."
+  },
+  {
+    "id": 3,
+    "title": "Healthy Eats",
+    "description": "Quick and healthy recipes for busy days."
+  },
+  {
+    "id": 4,
+    "title": "Travel Tips",
+    "description": "Essential tips for a smooth travel experience."
+  },
+  {
+    "id": 5,
+    "title": "Fitness Goals",
+    "description": "Achieve your fitness goals with these tips."
+  },
+  {
+    "id": 6,
+    "title": "Book Lovers",
+    "description": "Top book recommendations for avid readers."
+  },
+  {
+    "id": 7,
+    "title": "Mindfulness",
+    "description": "Practice mindfulness to reduce stress."
+  },
+  {
+    "id": 8,
+    "title": "DIY Crafts",
+    "description": "Fun and easy DIY crafts for all ages."
+  },
+  {
+    "id": 9,
+    "title": "Career Boost",
+    "description": "Strategies to advance in your career."
+  },
+  {
+    "id": 10,
+    "title": "Eco-Friendly",
+    "description": "Tips for a more sustainable lifestyle."
+  },
+  {
+    "id": 11,
+    "title": "Pet Care",
+    "description": "How to take care of your furry friends."
+  },
+  {
+    "id": 12,
+    "title": "Home Decor",
+    "description": "Inspiring ideas to decorate your home."
+  },
+  {
+    "id": 13,
+    "title": "Digital Nomad",
+    "description": "Guide to living as a digital nomad."
+  },
+  {
+    "id": 14,
+    "title": "Gardening Fun",
+    "description": "Start your own garden with these tips."
+  },
+  {
+    "id": 15,
+    "title": "Music Vibes",
+    "description": "Discover new music to uplift your mood."
+  },
+  {
+    "id": 16,
+    "title": "Art Inspiration",
+    "description": "Get inspired by these creative art projects."
+  },
+  {
+    "id": 17,
+    "title": "Fitness Routine",
+    "description": "Effective workout routines for all levels."
+  },
+  {
+    "id": 18,
+    "title": "Mental Health",
+    "description": "Ways to improve your mental well-being."
+  },
+  {
+    "id": 19,
+    "title": "Cooking Hacks",
+    "description": "Time-saving cooking hacks for busy cooks."
+  },
+  {
+    "id": 20,
+    "title": "Fashion Trends",
+    "description": "Stay stylish with the latest fashion trends."
+  },
+  {
+    "id": 21,
+    "title": "Coding Skills",
+    "description": "Boost your coding skills with these resources."
+  },
+  {
+    "id": 22,
+    "title": "Social Media",
+    "description": "Grow your social media presence effectively."
+  },
+  {
+    "id": 23,
+    "title": "Budget Travel",
+    "description": "Travel the world on a budget."
+  },
+  {
+    "id": 24,
+    "title": "Photography",
+    "description": "Improve your photography skills easily."
+  },
+  {
+    "id": 25,
+    "title": "Healthy Habits",
+    "description": "Adopt healthy habits for a better life."
+  }
+]
