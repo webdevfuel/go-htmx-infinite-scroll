@@ -52,15 +52,15 @@ func getCursorOrFallback(r *http.Request, key string, fallback int) (int, error)
 }
 
 func handleHTMXRequest(r *http.Request) (templ.Component, error) {
-	cursor, err := getCursorOrFallback(r, "cursor", 5)
+	prevCursor, err := getCursorOrFallback(r, "cursor", 5)
 	if err != nil {
 		return nil, err
 	}
-	posts, nextCursor, err := post.GetPostsByCursorAndLimit(cursor, 4)
+	posts, nextCursor, err := post.GetPostsByCursorAndLimit(prevCursor, 4)
 	if err != nil {
 		return nil, err
 	}
-	component := template.PostsAndButton(posts, nextCursor)
+	component := template.PostsAndButton(posts, nextCursor, prevCursor != nextCursor)
 	return component, nil
 }
 
