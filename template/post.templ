@@ -1,0 +1,19 @@
+package template
+
+import (
+	"fmt"
+	"github.com/webdevfuel/go-htmx-infinite-scroll/post"
+)
+
+templ Posts(posts post.Posts) {
+	for _, post := range posts {
+		@Post(post)
+	}
+}
+
+templ Post(post post.Post) {
+	<div id={ fmt.Sprintf("post-%d", post.ID) } class="flex flex-col border border-neutral-100 rounded-lg p-2.5 shadow-sm">
+		<p>{ post.Title }</p>
+		<p>{ post.Description }</p>
+	</div>
+}
