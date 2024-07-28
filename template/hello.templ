@@ -1,0 +1,9 @@
+package template
+
+import "github.com/webdevfuel/go-htmx-infinite-scroll/template/layout"
+
+templ Hello(name string) {
+	@layout.Base() {
+		<div class="text-2xl">Hello, { name }!</div>
+	}
+}

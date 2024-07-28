@@ -1,0 +1,16 @@
+{
+  "name": "go-htmx-infinite-scroll",
+  "version": "1.0.0",
+  "description": "go-htmx-infinite-scroll",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwindcss": "tailwindcss -i ./app.css -o ./static/app.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  }
+}
