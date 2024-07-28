@@ -12,19 +12,23 @@ templ InfiniteScroll(posts post.Posts) {
 		<div class="grid grid-cols-2 gap-2.5" id="posts">
 			@Posts(posts)
 		</div>
-		@LoadMoreButton(0)
+		@LoadMoreButton(0, true)
 	}
 }
 
-templ PostsAndButton(posts post.Posts, lastCursor int) {
+templ PostsAndButton(posts post.Posts, lastCursor int, showLoadMore bool) {
 	@Posts(posts)
-	@LoadMoreButton(lastCursor)
+	@LoadMoreButton(lastCursor, showLoadMore)
 }
 
-templ LoadMoreButton(cursor int) {
+templ LoadMoreButton(cursor int, showLoadMore bool) {
 	<div
 		id="load-more"
-		hx-swap-oob="true"
+		if showLoadMore {
+			hx-swap-oob="true"
+		} else {
+			hx-swap-oob="delete"
+		}
 		class="group"
 	>
 		<button
